@@ -1,7 +1,19 @@
-body { 
-  margin: 0; 
-  padding: 0; 
+body {
+  background: #222;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: verdana;
 }
-#slides { 
-  width: 100%; 
+#controls {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0 1em 0;
+  color: #CCC;
+  border-bottom: 1px solid #333;
+}
+#controls span {
+  float: left;
+  font-style: italic;
+  padding-left: 1em;
 }

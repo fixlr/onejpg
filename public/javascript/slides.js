@@ -1,6 +1,5 @@
 var currentPosition = function() {
   return parseInt($('#pos').text());
-  
 }
 var previousSlide = function() {
   viewSlide(currentPosition() - 1);
@@ -13,22 +12,13 @@ var viewSlide = function(i) {
   $('#pos').html(i);
 }
 $(document).ready(function() {
-  viewSlide(17);
-  $("#previous").click(function() {
-    previousSlide()
-    return false;
-  });
-  $("#next").click(function() {
-    nextSlide()
-    return false;
-  });
-  
+  viewSlide(1);
   $(document).keydown(function(e){
-    if (e.keyCode == 37 || e.keyCode == 38) { 
+    if (e.keyCode == 37) { 
       previousSlide();
       return false;
     }
-    else if (e.keyCode == 39 || e.keyCode == 40) {
+    else if (e.keyCode == 39) {
       nextSlide();
       return false;
     }
