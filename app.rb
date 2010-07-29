@@ -9,6 +9,6 @@ get '/' do
 end
 
 get '/slides' do
-  @jpg_url = params[:url]
+  @jpg_url, @position = params[:url].match(/(https?\:\/\/.+?)\/([\d]+)\.jpg/).captures
   erb :slides
 end

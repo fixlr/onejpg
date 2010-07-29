@@ -12,7 +12,7 @@ var viewSlide = function(i) {
   $('#pos').html(i);
 }
 $(document).ready(function() {
-  viewSlide(1);
+  viewSlide(currentPosition());
   $(document).keydown(function(e){
     if (e.keyCode == 37) { 
       previousSlide();

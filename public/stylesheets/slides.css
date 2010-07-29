@@ -5,6 +5,22 @@ body {
   text-align: center;
   font-family: verdana;
 }
+form p {
+  font-size: 2em;
+  color: #0a6;
+  margin: 3em auto;
+}
+label {
+}
+input[type=text] {
+  font-size: 1.2em;
+  width: 75%;
+  background-color: #222;
+  color: #aaa;
+  border: 1px solid #444;
+  padding: 10px;
+  outline: none;
+}
 #controls {
   text-align: center;
   margin: 0 auto;
