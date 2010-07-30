@@ -33,3 +33,14 @@ input[type=text] {
   font-style: italic;
   padding-left: 1em;
 }
+
+.new {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.new a {
+  color: #0a6;
+  background-color: transparent;
+  text-decoration: none;
+}
