@@ -14,7 +14,7 @@ var viewSlide = function(i) {
 $(document).ready(function() {
   viewSlide(currentPosition());
   $(document).keydown(function(e){
-    if (e.keyCode == 37) { 
+    if (currentPosition() > 1 && e.keyCode == 37) { 
       previousSlide();
       return false;
     }
