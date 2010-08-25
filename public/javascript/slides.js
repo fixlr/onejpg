@@ -1,3 +1,5 @@
+var shown = 0;
+var t = null;
 var currentPosition = function() {
   return parseInt($('#pos').text());
 }
@@ -22,6 +24,18 @@ $(document).ready(function() {
       nextSlide();
       return false;
     }
+  });
+  $('body').mousemove(function() {
+    if (!shown) {
+      shown = 1;
+      $('#controls').slideDown(300);
+    } else {
+      window.clearTimeout(t);
+    }
+    t = window.setTimeout(function() {
+      $('#controls').slideUp(300);
+      shown = 0;
+    }, 2500);
   });
 });
 

@@ -22,13 +22,27 @@ input[type=text] {
   outline: none;
 }
 #controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
   text-align: center;
   margin: 0 auto;
   padding: 1em 0 1em 0;
   color: #CCC;
+  background-color: #222;
   border-bottom: 1px solid #333;
+  z-index: 1000;
+  opacity: 0.9;
+}
+#controls.shown {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #controls span {
+  display: block;
   float: left;
   font-style: italic;
   padding-left: 1em;
@@ -43,4 +57,11 @@ input[type=text] {
   color: #0a6;
   background-color: transparent;
   text-decoration: none;
+}
+
+#slides {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 100%;
 }
