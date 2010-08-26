@@ -33,9 +33,9 @@ $(document).ready(function() {
       window.clearTimeout(t);
     }
     t = window.setTimeout(function() {
-      $('#controls').slideUp(100);
+      $('#controls').slideUp(300);
       shown = 0;
-    }, 1000);
+    }, 750);
   });
 });
 
