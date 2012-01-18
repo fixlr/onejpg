@@ -13,15 +13,29 @@ class Slide
   show: ->
     $('#slides').html("<img src=\"#{@url}/#{@position}.jpg\" />")
 
-  respondToKey: (key)->
-    if @position > 1 && key == 37
+  respondToKey: (code)->
+    key = new Key(code)
+
+    if not this.isFirstPosition() && key.isLeftArrow()
       @back()
-    else if key == 39
+    else if key.isRightArrow()
       @forward()
+
+  isFirstPosition: ->
+    @position == 1
 
   setPosition: (newPosition)->
     @position = newPosition
     $('#pos').html(newPosition)
+
+class Key
+  constructor: (@code) ->
+
+  isLeftArrow: ->
+    (@code == 37)
+
+  isRightArrow: ->
+    (@code == 39)
 
 $(document).ready ->
   slide = new Slide(jpg_url, currentPosition)
