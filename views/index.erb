@@ -1,20 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
   <head>
     <title>One dot jpg</title>
-    <link rel="stylesheet" href="/stylesheets/slides.css" type="text/css" media="screen">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> 
-    <script>
-    $(document).ready(function() {
-      $("#jpg_url").focus();
-    });
-    </script>
+    <link rel="stylesheet" href="/stylesheets/slides.css">
   </head>
   <body>
-    <form action="/slides">
-      <p><label for="jpg_url">#1.</label>
-      <input type="text" name="url" size="100" id="jpg_url" /></p>
+    <form method="get" action="/slides">
+      <p>
+        <label for="jpg_url">#1.</label>
+        <input type="text" name="url" size="100" id="jpg_url" />
+      </p>
     </form>
+    <script>window.onload = function() { document.getElementById('jpg_url').focus(); }</script>
   </body>
 </html>

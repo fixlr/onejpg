@@ -1,11 +1,15 @@
-require 'rubygems'
 require 'sinatra'
 require 'erb'
+require 'coffee-script'
 
 set :static, true
 
 get '/' do
   erb :index
+end
+
+get '/javascript/slides.js' do
+  coffee :slides
 end
 
 get '/slides' do
