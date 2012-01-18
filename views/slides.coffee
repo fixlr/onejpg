@@ -16,7 +16,7 @@ class Slide
   respondToKey: (code)->
     key = new Key(code)
 
-    if not this.isFirstPosition() && key.isLeftArrow()
+    if key.isLeftArrow() && not this.isFirstPosition()
       @back()
     else if key.isRightArrow()
       @forward()
